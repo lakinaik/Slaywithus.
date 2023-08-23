@@ -1,0 +1,40 @@
+  <!-- ==============footer============ -->
+  <footer class="container-fluid">
+    <div class="row justify-content-center footer-wrapper my-4">
+      <div class="col-lg-3">
+        <a href="/"><img src="../public/images/SlaywithUs-logo.png" alt="logo" class="img-fluid" width="200"></a>
+        <p class="footer-qoute">A convenient flexible, time saving service, tailored to your style requirements.</p>
+      </div>
+      <div class="col-lg-3">
+        <h2 class="footer-heading text-lg-start text-center">QUICK LINKS</h2>
+        <ul class="footer-link ps-0">
+          <li class="link"><a href="/">home</a></li>
+          <li class="link"><a href="/about-us">About us</a></li>
+          <li class="link"><a href="/blog">blog</a></li>
+          <li class="link"><a href="/contact-us">contact us</a></li>
+          <li class="link"><a href="/privacy-policy">privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h2 class="footer-heading text-lg-start text-center">MY ACCOUNT</h2>
+        <ul class="footer-link ps-0">
+          <li class="link"><a href="/booking">BOOK AN APPOINTMENT</a></li>
+          {{#if isAuthenticated}}
+          <li class="link"><a href="/logout">logout</a></li>
+          {{else}}
+          <li class="link"><a href="/login">login</a></li>
+          <li class="link"><a href="/register">register</a></li>
+          {{/if}}
+          <li class="link"><a href="/">reset password</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <p><i class="bi bi-envelope mx-2"></i>Email: <a href="mailto:slaywithus@gmail.com"
+            class="text-white">slaywithus@gmail.com</a></p>
+        <p class="footer-qoute">"Your Style, Perfected: Experience the Art of Custom Styling with Our Consultancy. From
+          Tailored Outfits to Flawless Accessories, We Craft a Look That's Uniquely You."</p>
+      </div>
+    </div>
+    <hr>
+    <p class="Copyright-text text-center">Copyright © 2023 All Rights Reserved. Developed By DIGITAL DETA</p>
+  </footer>

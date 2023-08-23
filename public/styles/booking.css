@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+.section-header .heading {
+    font-family: 'Cinzel', serif;
+    color: black;
+    font-size: 3.2rem;
+    font-weight: 400;
+}
+
+.tab-container {
+    padding: 20px 35px 20px 8px;
+    text-align: start;
+}
+
+.tab-container,
+.tab-details {
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(219, 212, 212, 0.7);
+    border: 1px solid #d1d1d1;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    background-color: white !important;
+    color: black !important;
+}
+
+.tab-container .tabs {
+    padding: 0px 6px;
+}
+
+.tabs,
+.res-tab {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.tab-details {
+    width: 840px;
+}
+
+.tabs {
+    padding: 20px !important;
+}
+
+.res-tab {
+    display: none;
+}
+
+.tab-link{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.tab-link i {
+    color: #6d6f74 !important;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.tab-link.active,
+.tab-link.active i {
+    color: #0cd85a !important;
+}
+
+
+
+/* ============ tab details=========== */
+
+.sub-heading {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.tab-details {
+    margin-bottom: 30px;
+}
+
+.cat-btn {
+    border: 1px solid #0fad4c;
+    background-color: transparent;
+    padding: 4px 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.check-icon {
+    color: #38d675;
+}
+
+.button-group {
+    border-top: 1px solid #a2a3a5;
+    padding: 15px 10px;
+    text-align: end;
+}
+
+.button-group .back-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.button-group .Next-btn {
+    background-color: #12D488;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.button-group .Next-btn .next-head {
+    font-weight: 600;
+}
+
+/* ============Services List=========== */
+#services {
+    height: 450px;
+    overflow: auto;
+    padding: 20px 40px;
+}
+
+.service-list .service {
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.service-list .service.active {
+    border: 1px solid #0cd85a;
+    box-shadow: 0px 0px 10px rgba(94, 90, 90, 0.4);
+}
+
+.service-list .service.active .check-icon {
+    display: block;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    border: #a2a3a5 1px solid;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-details .service-name {
+    font-size: 1.2rem;
+    color: #535050;
+}
+
+.service-details .check-icon {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    display: none;
+}
+
+.service-details p {
+    font-weight: 500;
+    color: #747070;
+}
+
+.service-details p .duration {
+    font-weight: 700;
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.service-details p .price {
+    background-color: #3ac578;
+    color: white;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 6px;
+
+}
+
+/* ==============Date and TIme============ */
+.calender {
+    padding: 0px;
+}
+
+.top {
+    padding: 10px;
+    border-bottom: #d1d1d1 1px solid;
+}
+
+.top button {
+    background-color: white;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.top p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.day-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.day-container div {
+    width: 14.28%;
+    height: 50px;
+    border: #d1d1d1 1px solid;
+    margin: 0px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.prev-day {
+    cursor: not-allowed !important;
+}
+
+.prev-day,
+.next-day {
+    background-color: #f6f7f8;
+    color: #5a5a5a;
+}
+
+.day div.selected {
+    background-color: #46e483;
+    color: white;
+}
+
+
+/* ==============Time slot============== */
+.time-slot {
+    height: 500px;
+    overflow: auto;
+}
+
+.times {
+    width: 48%;
+    cursor: pointer;
+    transition: all .4s;
+    padding: 8px;
+}
+
+.times:hover {
+    border: 1px solid #46e483 !important;
+}
+
+.times span {
+    font-size: .9rem;
+}
+
+.time-head {
+    color: #a09f9f;
+    font-weight: 600;
+}
+
+/* =============Basic Details============ */
+
+label {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #6b6b6b;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+label span {
+    color: rgb(252, 69, 69) !important;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 4px;
+    right: -10px;
+}
+
+textarea {
+    resize: none;
+    background-color: #faf7f7 !important;
+}
+
+.basic-details input
+.personal-details input {
+    padding: 6px 10px !important;
+    border-radius: 5px !important;
+    border: 1px solid #ddd8d8 !important;
+    background-color: #faf7f7 !important;
+}
+
+.basic-details input:focus,
+textarea:focus
+ {
+    box-shadow: 0 0 1px 1px #46e483 !important;
+    border: none !important;
+    background-color: #faf7f7;
+
+
+}
+.personal-details input:focus,
+textarea:focus{
+    box-shadow: 0 0 1px 1px #46e483 !important;
+    border: none !important;
+    background-color: #faf7f7;
+}
+
+/* ============Personal Details============= */
+
+
+
+/* ========Responsive Code============= */
+@media screen and (max-width:998px) {
+    .booking {
+        padding: 20px;
+    }
+
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .tabs li{
+        text-align: center !important;
+        font-size: 1rem;
+    }
+    .tabs li ,
+    .tabs li span{
+        display: inline-block;
+    }
+    .tabs li i{
+        font-size: 1.3rem;
+    }
+    .tab-container {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h4{
+        font-size: 2rem !important;
+    }
+    #services {
+        padding: 8px;
+    }
+    .service-details h2 {
+        font-size: 1rem !important;
+    }
+
+    .service-details p {
+        font-size: .9rem;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    .res-tab {
+        padding: 0;
+        margin-bottom: 0;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        gap: 2px;
+    }
+
+    .res-tab .res-tab-link {
+        padding: 10px 14px;
+        position: relative;
+    }
+
+    .res-tab .res-tab-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        background-color: #0cd85a;
+        height: 2px;
+        width: 0%;
+    }
+
+    .res-tab .res-tab-link a {
+        color: black;
+        font-weight: 700;
+    }
+
+    .res-tab .res-tab-link.active a {
+        color: #0cd85a;
+    }
+
+    .res-tab .res-tab-link.active::after {
+        width: 100%;
+    }
+
+    .times {
+        width: 46%;
+    }
+    .selected-date-time,
+    .selected-service{
+        font-size: 1rem;
+    }
+}
+
+
+#outfitphoto,
+#profileimage{
+    width: 100% !important;
+}
+
+.button-group {
+    border-top: none !important;
+    padding: 15px 10px;
+    text-align: end;
+}
+
+.button-group .back-btn {
+    background-color: #12D488;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.button-group .Next-btn {
+    background-color: #12D488;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.button-group .Next-btn .next-head {
+    font-weight: 600;
+}
+
+.time-slot .times.active {
+    background-color: #0cd85a;
+    color: white;
+}
+
+.day-container .calendar-day.active {
+    background-color: #0cd85a;
+    color: white;
+}
+
+.summary {
+    color: black;
+}
+.customer-name,
+.selected-service,
+.selected-date-time{
+    font-size: 1.2rem;
+    color: rgb(22, 163, 76) !important;
+    font-weight: bold;
+}
+
+/* =============Comment============= */
+
+.comment input{
+    background-color: #F9F9F9;
+    color: black;
+    border: none !important;
+    padding: 5px;
+}
+.comment textarea{
+    border: none !important;
+    outline: none !important;
+    font-size: 1.2rem;
+}
+.comment textarea:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.comment input:focus{
+    border: none !important;
+    outline: none !important;
+
+}
+.comment-btn {
+    background-color: black;
+    color: white;
+    padding: 8px 18px;
+    font-size: .8rem;
+    font-family: "Jost", sans-serif;
+    border: none;
+    transition: all .3s;
+}
+
+.comment-btn:hover {
+    background-color: chocolate;
+}
+
+body.darkMode li,
+body.darkMode h4,
+body.darkMode .bredcrumb a,
+body.darkMode .bredcrumb span {
+    color: white !important;
+}
+
+body.darkMode .sub-heading,
+body.darkMode .cat-btn,
+body.darkMode .service-name,
+body.darkMode .duration{
+    color: white !important;
+}
+body.darkMode .img-box i{
+    color: white;
+}
+body.darkMode .tab-container,
+body.darkMode .tab-details{
+    background-color: rgb(24, 23, 23) !important;
+    color: white !important;
+}
+
+body.darkMode .summary span,
+body.darkMode .customer-name,
+body.darkMode .selected-service,
+body.darkMode .selected-date-time{
+    color: white !important;
+}
+@media screen and (max-width:448px){
+    .times{
+        font-size: 10px;
+        padding: 2px;
+    }
+    .button-group button{
+        font-size: .9rem !important;
+        padding: 2px;
+    }
+    .summary p{
+        font-size: .8rem !important;
+    }
+   
+    } 
+
+    .input-field{
+        background-color: #F9F9F9;
+        border: none;
+        outline: none;
+        height: 2.5rem;
+        color: #000000;
+        font-family: 'Jost', sans-serif !important;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 8px 14px;
+        width: 100% !important;
+    }
+    .input-field:focus{
+        background-color: #E8F0FE !important;
+        color: #000000;
+        font-family: 'Jost', sans-serif !important;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px 14px;
+    }
+    textarea{
+        background-color: #F9F9F9;
+        border: none !important;
+        outline: none !important;
+        color: #000000;
+        font-family: 'Jost', sans-serif !important;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 1rem;
+        height: 150px;
+    }
+    textarea:focus{
+        border: none !important;
+        outline: none !important;
+    }
+    .left-form-wrapper .bi{
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        color: #777777;
+        padding-right: .4rem;
+        color: #edac63;
+    }
+    
+    .form-btn:hover{
+        background-color: #edac63 !important;
+    }
+    @media screen and (min-width: 1200px){
+        .input-field{
+            width: 100% !important;
+        }
+        .textarea{
+            width: 200% !important;
+        }
+    }
+    body.darkMode label{
+        color: white !important;
+    }

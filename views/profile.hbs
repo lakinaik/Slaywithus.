@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>slaywithus.</title>
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="../public/styles/login.css" />
+  <link rel="stylesheet" href="../public/styles/profile.css" />
+  <link rel="stylesheet" href="../public/styles/footer.css" />
+
+  <!-- Bootstrap icons cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- aos annimation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <div class="profile" id="profile">
+    <a href="/"><button class="profile-close-btn"><i class="bi bi-x"></i></button></a>
+    <div class="top-deatails d-flex align-items-center gap-2 flex-wrap">
+      <div class="profile-img">
+        <img src="{{user.image}}" alt="image">
+      </div>
+      <div>
+        <h2>{{user.firstname}} {{user.lastname}}</h2>
+        <p>Update your Profle photo and Personal details</p>
+      </div>
+    </div>
+    <hr>
+    <div class="btn-group">
+      <button class="btn save ms-3 d-none d-md-block">Update</button>
+    </div>
+    <div class="profile-details d-flex gap-md-5 flex-wrap">
+       <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="text-md-center detail">Basic Details</h4>
+            </div>
+          </div>
+          <div class="row m-0 p-0 mt-md-3 justify-content-md-end">
+            <div class="col-5  col-md-4 m-0 p-0 text-start">
+              <div class="label pb-2">First Name:</div>
+              <div class="label pb-2">Last Name:</div>
+              <div class="label pb-2">E-mail:</div>
+              <div class="label pb-2">Phone:</div>
+              <div class="label pb-2">Country:</div>
+              <div class="label pb-2">State:</div>
+            </div>
+            <div class="col-5 col-md-4 m-0 p-0">
+              <div class="label pb-2">{{user.firstname}}</div>
+              <div class="label pb-2">{{user.lastname}}</div>
+              <div class="label pb-2">{{user.email}}</div>
+              <div class="label pb-2">{{user.phone}}</div>
+              <div class="label pb-2">{{user.country}}</div>
+              <div class="label pb-2">{{user.state}}</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- annimation aos  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- ==========custom javascript============ -->
+  <script src="../public/javascripts/script.js"></script>
+</body>
+
+</html>

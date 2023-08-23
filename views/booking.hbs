@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Booking - slaywithus.</title>
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../public/styles/footer.css" />
+    <link rel="stylesheet" href="../public/styles/booking.css" />
+    <link rel="stylesheet" href="../public/styles/navbar.css" />
+
+
+    <!-- Bootstrap icons cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <!-- aos annimation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../public/javascripts/countrystatecity.js?v2"></script>
+
+</head>
+<!-- ========Booking============= -->
+{{> navbar}}
+<section class="section-header my-3">
+    <p class="text-center bredcrumb"><a class="text-dark text-decoration-none"
+            href="/">Slaywithus&nbsp;&gt;&nbsp;</a><span>Book an Appointment</span></p>
+    <h4 class="heading text-center">Book an Appointment</h4>
+</section>
+<section class="booking container">
+    <div class="row gap-5">
+        <div class="col-lg-auto col tab-container p-1">
+            <ul class="tabs mb-0 list-unstyled">
+                <li class="tab-link active" id="tab-1"><i class="bi bi-hdd-stack-fill"></i><span>Services</span></li>
+                <li class="tab-link" id="tab-2"><i class="bi bi-calendar-event"></i><span>Date & Time</span></li>
+                <li class="tab-link" id="tab-3"><i class="bi bi-card-heading"></i><span>Basic Details</span></li>
+                <li class="tab-link" id="tab-3"><i class="bi bi-person-lines-fill"></i><span>Personal Details</span>
+                </li>
+                <li class="tab-link" id="tab-5"><i class="bi bi-clipboard2-check-fill"></i></span><span>Summary</span>
+                </li>
+                <li class="tab-link" id="tab-6"><i class="bi bi-bank2"></i></span><span>Payment</span></li>
+            </ul>
+            <ul class="col res-tab">
+                <li class="res-tab-link active" id="res-tab-1">01</li>
+                <li class="res-tab-link" id="res-tab-2">02</li>
+                <li class="res-tab-link" id="res-tab-3">03</li>
+                <li class="res-tab-link" id="res-tab-4">04</li>
+                <li class="res-tab-link" id="res-tab-5">05</li>
+                <li class="res-tab-link" id="res-tab-6">06</li>
+            </ul>
+        </div>
+        <!-- =============tab details============= -->
+        <div class="tab-details p-0">
+
+            {{!-- unnessary code --}}
+            <div id="multiStepForm" class="container">
+                <!-- Steps content will go here -->
+
+                <div class="step" id="step1">
+                    <!-- Step 1 content -->
+                    <section id="services">
+                        <div class="category">
+                            <h5 class="sub-heading">Select Category</h5>
+                            <button class="cat-btn">ALL<span class="check-icon ms-2"><i
+                                        class="bi bi-check-circle-fill"></i></span></button>
+                        </div>
+                        <ul class="service-list mt-5 ps-3">
+                            <h5 class="sub-heading">Select Service</h5>
+                            <!-- =====Service list ============== -->
+                            {{!-- {{#each service}} --}}
+                            {{!-- <li id="service-{{@index}}"
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        <img src={{this.serviceImage}} class="rounded-circle" alt="img">
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">{{this.serviceName}}</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">{{this.duration}}</span> Price:
+                                        <span class="price">₹{{this.price}}</span>
+                                    </p>
+                                </div>
+                            </li> --}}
+                            {{!-- {{/each}} --}}
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/anniversary.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Anniversary</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/bithday.jpeg" alt="" class="rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Birthday</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/pre-wedding.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Pre-wedding</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/wedding.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Wedding</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/cocktail.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Date Night/Cocktail</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/interviews.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Interviews</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/comeve.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Community Events</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li 
+                                class="row service align-items-center text-center text-md-start mb-4 ">
+                                <div class="col-md-auto d-flex justify-content-center">
+                                    <div class="service-icon">
+                                        {{!-- <img src={{this.serviceImage}} class="rounded-circle" alt="img"> --}}
+                                        <img src="../public/images/officeparty.jpeg" alt="" class="rounded-circle">
+
+                                    </div>
+                                </div>
+                                <div class="col service-details">
+                                    <span class="check-icon ms-2 fs-4"><i class="bi bi-check-circle-fill"></i></span>
+                                    <h2 class="service-name">Office function</h2>
+                                    <p class="mb-0 ">Duration: <span class="duration">30 m</span> Price:
+                                        <span class="price">₹500</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="button-group text-center text-md-end">
+                        <button id="nextStep1" class="step-button Next-btn">Next<i
+                                class="bi bi-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+
+                <div class="step" id="step2">
+                    <!-- Step 2 content -->
+                    <section class="Date-Time p-md-4 p-1" id="date-time">
+                        <h5 class="sub-heading">Date and Time</h5>
+                        <div class="row">
+                            <div class="col-12 border calender">
+                                <div class="top d-flex align-items-center justify-content-between p-3">
+                                    <button class="prev-btn"><i class="bi bi-chevron-left"></i></button>
+                                    <p class="m-0 date" id="monthYear"></p>
+                                    <button class="next-btn"><i class="bi bi-chevron-right"></i></button>
+                                </div>
+                                <!-- ===========days============== -->
+                                <div
+                                    class="weekDays d-flex align-items-center justify-content-between py-2 px-lg-4 px-2">
+                                    <div>Sun</div>
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                </div>
+                                <!-- =================Day=============== -->
+                                <div class="day-container d-flex flex-wrap">
+                                </div>
+
+                            </div>
+                            <div class="col-12 time-slot my-4 border">
+                                <h5 class="sub-heading my-3">Time Slot</h5>
+                                <h6 class="p-0 my-2 time-head">Morning</h6>
+                                <div class="row p-2">
+                                    <div class="border rounded m-1 times"><span>9:00 am - 9:30 am</span></div>
+                                    <div class="border rounded m-1 times"><span>9:30 am - 10:00 am</span></div>
+                                    <div class="border rounded m-1 times"><span>10:00 am - 10:30 am</span></div>
+                                    <div class="border rounded m-1 times"><span>10:30 am - 11:00 am</span></div>
+                                    <div class="border rounded m-1 times"><span>11:00 am - 11:30 am</span></div>
+                                    <div class="border rounded m-1 times"><span>11:30 am - 12:00 pm</span></div>
+                                </div>
+                                <h6 class="p-0 my-2 time-head">Afternoon</h6>
+                                <div class="row p-2">
+                                    <div class="border rounded m-1 times"><span>12:00 pm - 12:3 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>12:30 pm - 1:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>1:00 pm- 1:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>1:30 pm- 2:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>2:00 pm- 2:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>2:30 pm- 3:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>3:00 pm- 3:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>3:30 pm- 4:00 pm</span></div>
+                                </div>
+                                <h6 class="p-0 my-2 time-head">Evening</h6>
+                                <div class="row p-2">
+                                    <div class="border rounded m-1 times"><span>4:00 pm - 4:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>4:30 pm - 5:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>5:00 pm - 5:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>5:30 pm - 6:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>6:00 pm - 6:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>6:30 pm - 7:00 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>7:00 pm - 7:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>7:30 pm - 8:00 pm</span></div>
+                                </div>
+                                <h6 class="p-0 my-2 time-head">Night</h6>
+                                <div class="row p-2">
+                                    <div class="border rounded m-1 times"><span>8:00 pm - 8:30 pm</span></div>
+                                    <div class="border rounded m-1 times"><span>8:30 pm - 9:00 pm</span></div>
+                                </div>
+                            </div>
+                    </section>
+                    <div class="button-group d-flex justify-content-between text-center text-md-end">
+                        <button id="prevStep2" class="step-button back-btn"><i
+                                class="bi bi-arrow-left pe-2"></i>Previous</button>
+                        <button id="nextStep2" class="step-button Next-btn">Next<i
+                                class="bi bi-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+
+                <div class="step" id="step3">
+                    <!-- Step 3 content -->
+                    <section class="basic-details row p-lg-4 p-1 py-3">
+                        <h5 class="sub-heading">Basic Details</h5>
+                        <div class="col-12 my-2">
+                            <label for="fname">Firstname <span>*</span></label><br>
+                            <input type="text" name="fname" id="fname" class="w-100 form-control"
+                                placeholder="Enter your firstname" value="{{user.firstname}}" required>
+                        </div>
+                        <div class="col-12 my-2">
+                            <label for="lname">Lastname <span>*</span></label><br>
+                            <input type="text" name="lname" id="lname" class="w-100 form-control"
+                                placeholder="Enter your lastname" value="{{user.lastname}}" required>
+                        </div>
+                        <div class="col-12 my-2">
+                            <label for="email">Email Address <span>*</span></label><br>
+                            <input type="email" name="email" id="email" class="w-100 form-control"
+                                placeholder="Enter your email address" value="{{user.email}}" required>
+                        </div>
+                        <div class="col-12 my-2">
+                            <label for="email">Phone Number <span>*</span></label><br>
+                            <input class="w-100 form-control" id="phoneInput" value="{{user.phone}}" placeholder="Enter your phone number">
+                               <label class="pb-1 pt-3" for="country">Country
+                            :<span>*</span></label><br>
+                        <select name="country" class="countries px-2 py-1 rounded-3 w-100" id="countryId">
+                            <option value="{{user.country}}">{{user.country}}</option>
+                            <option value="">Select Country</option>
+                        </select><br />
+                        <label class="pb-1 pt-3" for="state">State
+                            :<span>*</span></label><b></b>
+                        <select name="state" class="states px-2 py-1 rounded-3 w-100" id="stateId">
+                            <option value="{{user.state}}">{{user.state}}</option>
+                            <option value="">Select State</option>
+                        </select><br>
+                        </div>
+                        <div class="col-12">
+                            <label for="note">Note</label><br>
+                            <textarea name="note" id="note" class="w-100 p-2 form-control" rows="3"
+                                placeholder="Enter note details"></textarea>
+                        </div>
+                    </section>
+                    <div class="button-group d-flex justify-content-between text-center text-center text-md-end">
+                        <button id="prevStep3" class="step-button back-btn"><i
+                                class="bi bi-arrow-left pe-2"></i>Previous</button>
+                        <button id="nextStep3" class="step-button Next-btn">Next<i
+                                class="bi bi-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+                <div class="step" id="step4">
+                    <section class="personal-details">
+                     
+                        <label class="pb-1 pt-3" for="dateofbirth">Date of Birth :<span>*</span></label><br>
+                        <input class="input-field" type="date" id="dob" name="dateofbirth" value="{{user.dateofbirth}}"
+                            required>
+                        <br />
+                        <label class="pb-1 pt-3" for="occupation">Occupation :<span>*</span></label><br>
+                        <select class="px-2 py-1 rounded-3 w-100" name="occupation" id="occupation" required>
+                            <option value="{{user.occupation}}">{{user.occupation}}</option>
+                            <option value="student">Student</option>
+                            <option value="homemaker">Homemaker</option>
+                            <option value="workingprofessional">Working professional</option>
+                            <option value="seniorcitizen">Senior Citizen</option>
+                            <option value="child">Child</option>
+                        </select><br />
+                        <label class="pb-1 pt-3" for="garmentscolor">Favourite Colour for Garments
+                            :<span>*</span></label><br>
+                            <p id="errorText" style="color: red; display: none;">Please select at least one option.</p>
+                        <input class="me-2 text-white" type="checkbox" name="garmentscolor" id="red" value="red"><label
+                            for="red">Red</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="blue" value="blue"><label
+                            for="blue">Blue</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="green" value="green"><label
+                            for="green">Green</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="yellow" value="yellow"><label
+                            for="yellow">Yellow</label><br>
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="orange" value="orange"><label
+                            for="orange">Orange</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="pink" value="pink"><label
+                            for="pink">Pink</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="purple" value="purple"><label
+                            for="purple">Purple</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="black" value="black"><label
+                            for="black">Black</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="grey" value="grey"><label
+                            for="grey">Grey</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="white" value="white"><label
+                            for="white">White</label>
+                        <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="magenta" value="magenta"><label
+                            for="magenta">Magenta</label> <br />
+                        <input class="me-2" type="checkbox" name="garmentscolor" id="Charcoal" value="charcoal"><label
+                            for="Charcoal">Charcoal</label> <br />
+                        <label class="pb-1 pt-3" for="bodybuilt">Body Built :<span>*</span></label><br>
+                        <select class="px-2 py-1 rounded-3 w-100" name="bodybuilt" id="bodybuilt" required>
+                            <option value="{{user.bodybuilt}}">{{user.bodybuilt}}</option>
+                            <option value="petite">Petite</option>
+                            <option value="standard">Standard</option>
+                            <option value="plussize">Plus Size</option>
+                        </select><br />
+                        <label class="pb-1 pt-3" for="complexion">Complexion :<span>*</span></label><br>
+                        <select class="px-2 py-1 rounded-3 w-100" name="complexion" id="complexion" required>
+                            <option value="{{user.complexion}}">{{user.complexion}}</option>
+                            <option value="wheatish">Wheatish</option>
+                            <option value="fair">Fair</option>
+                            <option value="brown">Brown</option>
+                        </select><br />
+                        <label class="pb-1 pt-3" for="sociallink">Please provide link to your social media
+                            profile
+                            :<span>*</span></label><br />
+                        <input class="input-field" type="url" name="sociallink" id="sociallink"
+                            placeholder="Paste here your profile link" value="{{user.sociallink}}" required><br />
+                        <label class="pb-1 pt-3" for="profileimage">Or upload a photo of yours to know you
+                            better
+                            :<span>*</span></label><br />
+                        <input class="input-field" type="file" name="profileimage" id="profileimage" required><br />
+                        <label class="pb-1 pt-3" for="favoritecloset">What are your 3 favourite items that
+                            you
+                            currently
+                            have in
+                            your closet? :<span>*</span></label><br />
+                        <input class="input-field" type="text" name="favoritecloset" placeholder="Write here..."
+                            value="{{user.favoritecloset}}" id="favoritecloset" required><br />
+                        <label class="pb-1 pt-3" for="outfitphoto">Please upload photo of the outfit for which you need
+                            advice
+                            (Upload two photos) :<span>*</span></label><br />
+                        <input class="input-field" type="file" name="outfitphoto" id="outfitphoto" multiple
+                            required><br />
+                        <label class="pb-1 pt-3" for="outfit">Anything else you would want to let us know
+                            :</label><br />
+                        <textarea name="message" placeholder="Message" class="p-2 w-100" id="bookinMessage"></textarea>
+                        <div class="my-3 text-end">
+                        </div>
+                    </section>
+                    <div class="button-group d-flex justify-content-between text-center text-center text-md-end">
+                        <button id="prevStep4" class="step-button back-btn"><i
+                                class="bi bi-arrow-left pe-2"></i>Previous</button>
+                        <button id="nextStep4" class="step-button Next-btn" onclick="saveService()">Next<i
+                                class="bi bi-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+
+                    <form action="/booking" method="post"
+            enctype="multipart/form-data">
+                <div class="step" id="step5">
+                    <!-- Step 4 content -->
+                    <section class="summary row p-4 text-center">
+                        <div class="img-box">
+                            <i class="bi bi-gift-fill"></i>
+                        </div>
+                        <h6 class="p-0 my-2 time-head">Your appointment booking summary</h6>
+                        <div class="customer">
+                            <span class="fw-bold">Customer</span>
+                            <p class="customer-name">Example</p>
+                        </div>
+                        <span class="fw-bold">service</span>
+                        <p class="selected-service fw-bold">Anniversary</p>
+                        <span class="fw-bold">Date & Time</span>
+                        <p class="selected-date-time fw-bold">29-08-2023, <br>09:00 am - 09:30 am</p>
+                    </section>
+                    <div class="button-group d-flex justify-content-between text-center text-center text-md-end">
+                        <button id="prevStep5" class="step-button back-btn"><i
+                                class="bi bi-arrow-left pe-2"></i>Previous</button>
+                        <button id="nextStep5" class="Next-btn">Book Appointment<i
+                                class="bi bi-arrow-right ps-2"></i></button>
+                    </div>
+                </div>
+                <div class="step" id="step6">
+                    <section class="row text-center payment">
+                        <div class="col">
+                            <img src="../public/images/QR Code.gif" alt="QR" class="img-fluid">
+                        </div>
+                        <div class="button-group d-flex justify-content-between text-center text-center text-md-end">
+                            <button id="prevStep6" class="step-button back-btn"><i
+                                    class="bi bi-arrow-left pe-2"></i>Previous</button>
+                            <button id="nextStep6" class="Next-btn" onclick="bookingConfirmed()">Payment done<i
+                                    class="bi bi-arrow-right ps-2"></i></button>
+                        </div>
+                    </section>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> footer}}
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+<!-- annimation aos  -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149371669-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149371669-1');
+    </script>
+<!-- ==========custom javascript============ -->
+<script>
+    // Get the select element
+    var selectoccupation = document.getElementById("occupation");
+    var selectbodybuilt = document.getElementById("bodybuilt");
+    var selectcomplexion = document.getElementById("complexion");
+    var selectcountry = document.getElementById("countryId");
+    var selectstate = document.getElementById("stateId");
+
+    var userOccupation = "{{user.occupation}}";
+    var userBodybuilt = "{{user.bodybuilt}}";
+    var userComplexion = "{{user.complexion}}";
+    var userCountry = "{{user.country}}";
+    var userState = "{{user.state}}";
+
+    if (userOccupation.trim() === "") {
+        selectoccupation.remove(0);
+    }
+    if (userBodybuilt.trim() === "") {
+        selectbodybuilt.remove(0);
+    }
+    if (userComplexion.trim() === "") {
+        selectcomplexion.remove(0);
+    }
+    if (userCountry.trim() === "") {
+        selectcountry.remove(0);
+    }
+    if (userState.trim() === "") {
+        selectstate.remove(0);
+    }
+</script>
+<script src="../public/javascripts/script.js"></script>
+<script src="../public/javascripts/booking.js"></script>
+</body>
+
+</html>

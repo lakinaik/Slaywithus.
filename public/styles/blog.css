@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&family=Jost:wght@600&display=swap');
+body{
+    font-family: 'Cormorant Garamond', serif !important;
+}
+
+body.darkMode h1{
+    color: white !important;
+}
+.blog-image img{
+    background-position: center;
+}
+.blog-title{
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 37px;
+    transition: .1s ease-in-out;
+}
+.blog-title:hover{
+    color: #edac63;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.blog-company-name{
+    font-family: 'Jost', sans-serif !important;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+}
+.blog-company-name:hover{
+    color: #edac63;
+    cursor: pointer;
+}
+.blog-time{
+    font-family: 'Jost', sans-serif !important;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 11px;
+    color: #111111;
+    cursor: pointer;
+}
+.blog-newssletter-wrapper{
+    border: 1px solid rgba(0, 0, 0, 0.412);
+    border-top: 5px solid #111111a1;
+    border-radius: 8px;
+}
+.newsletter-heading{
+    font-family: 'Cinzel', serif !important;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 34px;
+    color: #111111;
+}
+.newsletter-inner-heading{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #111111;
+}
+.newsletter-input-field{
+    border: 0;
+    border-bottom: 2px solid;
+}
+.newsletter-input-field::placeholder{
+    text-align: center;
+}
+.newsletter-input-field:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid;
+    font-size: 20px;
+    padding: 3px !important;
+}
+.newsletter-btn{
+    font-family: 'Jost', sans-serif !important;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 40px;
+    color: #ffffff; 
+    background-color: #111111;
+    padding: .1rem 3rem;
+    border-radius: 1rem;
+    border: none;
+    transition: .2s all ease-in-out;
+}
+.newsletter-btn:hover{
+    background-color: #edac63;
+    border: none;
+}
+.newsletter-checkbox{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #111111;
+    cursor: pointer;
+}
+.blog-latest > .heading{
+    font-family: 'Jost', sans-serif !important;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 11px;
+    color: #111111;
+}
+.latest-blog-image img{
+    background-position: center;
+}
+
+.latest-blog-inner-title{
+    font-family: 'Cinzel', serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    transition: .1s ease-in-out;
+}
+.latest-blog-inner-title:hover{
+    color: #edac63;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+.blog-category-heading{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: #111111;
+}
+.blog-category-list{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #111111; 
+}
+.blog-category-list:hover{
+    color: #edac63;
+}
+.blog-category-list span{
+    font-size: 20px;
+}
+
+/* media screen */
+@media screen and (max-width: 576px) {
+    .blog-title h2{
+        font-size: 17px !important;
+        line-height: 22px !important;
+    }
+    .latest-blog-inner-title{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+}
+@media screen and (min-width: 992px){
+    .blog-title h2{
+        font-size: 29px !important;
+        line-height: 37px !important;
+    }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>slaywithus.</title>
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  {{!-- Custom Css --}}
+  <link rel="stylesheet" href="../public/styles/index.css" />
+  <link rel="stylesheet" href="../public/styles/navbar.css" />
+  <link rel="stylesheet" href="../public/styles/footer.css" />
+
+{{!-- Bootstrap icons cdn --}} 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- ================Pop Up============ -->
+
+  <div class="container-fluid p-0">
+    <div class="row m-0 popUp-wrapper justify-content-center align-items-center">
+      <div class="col-md-7 p-0 ">
+        <div class="row m-0 popUp">
+          <div class="col-6 img-wrapper p-0">
+            <img src="http://slaywithus.com/wp-content/uploads/2023/05/pexels-pixabay-157757.jpg" alt="img">
+          </div>
+          <div class="col-6 p-0 d-flex align-items-center justify-content-center position-relative">
+            <button class="newsLatter-close-btn">&#x2715</button>
+            <div class="text-center p-2">
+              <h2 class="newsletter-heading">Subscribe Newsletter</h2>
+              <p class="newsletter-inner-heading">
+                Get our latest news straight into your inbox.
+              </p>
+              <input class="newsletter-input-field py-1" type="email" name="email"
+                placeholder="Input your e-mail" /><br />
+              <button class="newsletter-btn my-4">SIGN UP</button><br>
+              <input type="checkbox"  id="checkbox"/>
+                  <label for="checkbox">By clicking, You are agreeing
+                    to our terms.</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {{> navbar}}
+
+  <main class="container">
+  {{!-- carousel --}}
+  {{> carousel slide=slide}}
+       <section class="hero-text-wrapper text-center">
+      <div class="col intro-text">
+        <h2>Personal Stylist and Fashion Counsellor</h2>
+        <p>
+          As a professional stylist, we can visualize how clothes will fit on
+          you and suggest the best pieces for your body-shape, your
+          personality that cover all occasions
+        </p>
+      </div>
+      <div class="passage p-0">
+        <h2 class="my-4">We are here for you</h2>
+        <p>
+          Maa: “I have this function and I am in doubt as to what to wear for
+          the same” <br> Us: Why are you confused? You have so many sarees to
+          choose from!
+          <br>Maa: But I have worn most of them and do not want to
+          purchase a new piece just for this function. <br> Isn’t this the tale of
+          all Indian households where we have seen our Moms, Aunts,
+          Neighborhood Aunties, Friends, Relatives all struggle with this
+          “What to wear?” syndrome. We call this a syndrome as it’s a
+          characteristic that brings in opinions, emotions and one’s behavior.
+          To get rid of this syndrome that plagues us every now and then, we
+          two sisters have come up with “Slay with us”. A platform by us that
+          will help you save your time and energy that you waste considerably
+          fight this syndrome in your day to day life
+        </p>
+      </div>
+    </section>
+    <!-- ===============Work Section========== -->
+    <section class="work-wrapper container-fluid">
+      <section class="first-section row justify-content-lg-between justify-content-center">
+        <div class="col-lg-6 col left-text text-center text-lg-start">
+          <h3 class="text-center my-3">How It Works</h3>
+          <p class="text-start">To start with, you have to fill a questionnaire in-order for us to get a
+            deeper understanding of your body shape, taste, lifestyle and budget. Followed by a zoom consultation, where
+            we discuss your style goals, and if there are any particular areas-work, holiday, new mom, dating,
+            socializing, etc-you would like to focus on. We then suggest you few personal style guide of outfits that
+            may match your choices.</p>
+          <button class="btn my-3 text-lg-start text-center"><a href="/how-it-works">Know More</a></button>
+        </div>
+        <div class="col-lg-6 col-10 right-image text-lg-end text-center">
+          <img src="../public/images/work-section.jpg" alt="image" width="400" class="img-fluid">
+        </div>
+      </section>
+      <section class="second-section row justify-content-lg-between justify-content-center my-3">
+        <div class="col-lg-6 col-10 right-image">
+          <div class="img-box">
+            <img src="../public/images/computer.jpg" alt="image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6 col left-text my-4 text-center text-lg-start">
+          <h3>What Is Included</h3>
+          <p class="text-start">Personal styling questionnaire.
+            An initial zoom call to discuss your style requirements. Can include 2 existing items from your wardrobe,
+            that you want to know how to style.
+            Can also include shoes, jewelry and accessories.</p>
+          <button class="btn my-3"><a href="/what-is-included">Know More</a></button>
+        </div>
+      </section>
+      <section class="third-section row gap-0 justify-content-lg-between justify-content-center text-center">
+        <div class="col-lg-6 left-text text-center text-lg-start">
+          <h3 class="text-lg-start text-center my-3">Know The Slayers</h3>
+          <p class="text-start">Your very own Jigyansa and Mithila are “Virtual Fashionistas” by their own choice and
+            passion. The ability
+            to mix-match varied hues with innumerable outfits on ample occasions led the two sisters to collaborate and
+            start their totally unique concept of “Virtual styling” for the very first time in India. Furthermore,
+            Jigyansa is a Banker by profession and Mithila is a Human resource Consultant. Both the sisters have a flair
+            for writing and Jigyansa has even authored an ebook “STAGGERED” in the year 2020.Spending their formative
+            years in Bhubaneswar and eventually living in Maharashtra, the United States and United Kingdom helped them
+            to gain a global exposure that led to the inception of their virtual styling idea. Their vision is to create
+            a “Fashionable India” for women from 18-60 plus years age group who come across this tumultuous question in
+            their everyday life “What to wear”.</p>
+          <button class="btn my-3"><a href="/what-is-included">Know More</a></button>
+        </div>
+        <div class="col-lg-3 col-12 video-wrapper text-lg-start ps-0 ms-0 pe-2">
+          <video src="http://slaywithus.com/wp-content/uploads/2023/06/merge.mp4" preload="metadata"
+            controlsList="nodownload" controls></video>
+        </div>
+      </section>
+    </section>
+    <!-- =============SLAYERS STORIES============== -->
+    <div class="story-wrapper container-fluid my-4">
+      <h2 class="section-heading text-center">SLAYERS STORIES</h2>
+      <div class="row">
+
+        {{#each blogs}}
+        <div class="col-lg-4 col-md-6 story-box">
+          <a href="#">
+            <div class="img-wrapper position-relative">
+              <img
+                src={{this.imageUrl}}
+                alt="image" class="img-fluid">
+              <span>{{this.category}}</span>
+            </div>
+          </a>
+          <div class="story-details">
+            <span class="my-2"><a href="">{{this.title}}</h4></a>
+              <button class="bookmark-btn"><i class="bi bi-bookmark"></i></button>
+              <p class="upload-details"><span>{{this.admin}}</span> | <span>{{this.date}}</span></p>
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+      <!-- =================Service Section============== -->
+      <div class="row service justify-content-center">
+        <div class="block-heading text-center my-3">
+          <h2>Personal Styling Services</h2>
+          <p>Find your perfect look for every ocassion</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Anniversary</h3>
+          <div class="image-wrapper">
+            <a href="#"><img
+                src="https://slaywithus.com/wp-content/uploads/2023/05/Prewedding_Shoot_Indian_Outfit_1_2048x2048-672x1024.png"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Red Wine or Champagne don't forget to raise a tost to each other in your journey by
+            being your best self in happening clothes</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Birthdays</h3>
+          <div class="image-wrapper">
+            <a href="#"><img src="https://slaywithus.com/wp-content/uploads/2023/06/Anarkali_salwar_suit_600x6002.jpg"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Burn the candles while making sure you are dressed to the nines</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Pre-Wedding</h3>
+          <div class="image-wrapper">
+            <a href="#"><img src="https://slaywithus.com/wp-content/uploads/2023/06/Anarkali_salwar_suit_600x600.jpg"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Let's fit into "Gharara,Sharara" and take on the stage by grooving to the beats.</p>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <h3 class="service-title text-center">Wedding
+          </h3>
+          <div class="image-wrapper">
+            <a href="#"><img src="https://slaywithus.com/wp-content/uploads/2023/06/Anarkali_salwar_suit_600x6001.jpg"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">The brave hearted will take the Bride only when the "D-Day" look will make the groom's
+            heart skip a beat. What say?</p>
+        </div>
+        <div class="col-lg-5 col-md-6">
+          <h3 class="service-title text-center">Date Night/Cocktail
+          </h3>
+          <div class="image-wrapper">
+            <a href="#"><img src="https://slaywithus.com/wp-content/uploads/2023/06/Anarkali_salwar_suit_600x6003.jpg"
+                alt="image" class="img-fluid" width="100%" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Let's make the Date night "A Night to Remember" by slipping into that perfect piece of
+            an outfit and wait for the sparks to fly.</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Interviews</h3>
+          <div class="image-wrapper">
+            <a href="#"><img
+                src="https://slaywithus.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-19-at-10.20.40-PM-763x1024.jpeg"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Making a statement has never been so difficult. Let's Conquer!!</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Office Function</h3>
+          <div class="image-wrapper">
+            <a href="#"><img
+                src="https://slaywithus.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-07-at-11.39.32-PM-830x1024.jpeg"
+                alt="image" class="img-fluid" width="100%" height="100%"></a>
+          </div>
+          <p class="service-para">Unleash Your Professional Power with Confidence and Style: Unveiling the Perfect
+            Office Function Outfit.</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h3 class="service-title text-center">Community Events</h3>
+          <div class="image-wrapper">
+            <a href="#"><img src="https://slaywithus.com/wp-content/uploads/2023/06/Anarkali_salwar_suit_600x6004.jpg"
+                alt="image" class="img-fluid"></a>
+          </div>
+          <p class="service-para">Solo or Group let's channel the inner Diva in that perfect ensemble and not miss a
+            chance to Dance our hearts ou</p>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  {{!-- footer --}}
+  {{> footer}}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  {{!-- ==========custom javascript============ --}}
+  <script src="../public/javascripts/script.js"></script>
+  <script src="../public/javascripts/popup.js"></script>
+</body>
+
+</html>

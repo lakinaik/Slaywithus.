@@ -1,0 +1,46 @@
+
+/* ===========footer============= */
+footer {
+    font-family: "Jost", sans-serif;
+    width: 100%;
+    background-image: url("../images/bgf.png");
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 30px 40px 10px 20px;
+  }
+  
+  footer .footer-heading {
+    font-size: 1.4rem;
+  }
+  
+  footer .link {
+    margin-bottom: 10px;
+  }
+  
+  footer .link a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all 0.4s;
+    font-size: 0.8rem;
+  }
+  
+  footer a:hover {
+    color: #ada6a6;
+  }
+  
+  .Copyright-text {
+    font-size: 0.8rem;
+    color: #d4cfcf;
+  }
+  
+  .footer-qoute {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    line-height: 26px;
+  }
+  

@@ -1,0 +1,18 @@
+ /* ===========privacy policy=============  */
+ .privacy{
+    font-weight: 400;
+    font-size: 1.5rem;
+  font-family: "Cormorant Garamond", serif !important;
+}
+.privacy h4{
+font-family: "Cinzel", sans-serif;
+font-weight: 400;
+font-size: 2.8rem;
+}
+.privacy p{
+font-size: 1.1rem;
+}
+body.darkMode a,
+body.darkMode span{
+color: white !important;
+}

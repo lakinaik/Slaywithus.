@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Blogs - slaywithus.</title>
+    <link rel="shortcut icon" href="../public/images/favicon.ico" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../public/styles/blog.css" />
+    <link rel="stylesheet" href="../public/styles/navbar.css" />
+    <link rel="stylesheet" href="../public/styles/footer.css" />
+
+    <!-- Bootstrap icons cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    {{> navbar}}
+
+    <div class="container-fluid m-0 p-0">
+        <div class="row m-1 my-4 justify-content-lg-center">
+            <div class="col-lg-11 col-12">
+                <div class="row justify-content-between">
+                    <div class="col-lg-9 pt-0 col-12  d-flex flex-wrap flex-direction-column">
+
+                        {{#each blogs}}
+                        <div class="row  m-0 p-0  pb-4 pb-lg-0 my-lg-0 blog-contents d-flex align-items-center">
+                            <div class="col-lg-4 col-md-3 col-5 blog-image position-relative">
+                                <img class="img-fluid w-100" src={{this.imageUrl}} alt="" />
+                            </div>
+                            <div class="col-lg-8 col-md-9 col-7 blog-heading m-0 ps-lg-4 ps-2 p-0">
+                                <div class="blog-title">
+                                    <h2>
+                                        {{this.title}}<i class="bi bi-bookmark px-2 fs-6 fs-lg-4"></i>
+                                    </h2>
+                                </div>
+                                <div class="blog-timing">
+                                    <span class="blog-company-name">{{this.admin}}</span>&nbsp;&nbsp;|&nbsp;
+                                    <span class="blog-time">{{this.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <div class="col-lg-3 mx-lg-0 m-lg-0 p-lg-0 mx-md-5">
+                        <div
+                            class="blog-newssletter-wrapper m-md-5 m-lg-0 ms-lg-2 p-md-5 p-lg-5 py-5  text-center align-items-center justify-content-center">
+                            <h2 class="newsletter-heading">Subscribe Newsletter</h2>
+                            <p class="newsletter-inner-heading">
+                                Get our latest news straight into your inbox.
+                            </p>
+                            <input class="newsletter-input-field py-2" type="email" name="email" id=""
+                                placeholder="Input your e-mail" /><br />
+                            <button class="newsletter-btn my-4">SIGN UP</button>
+                            <p class="newsletter-checkbox ps-2"><input class="" type="checkbox" name="" id="" /><span
+                                    class="ps-lg-1 ps-2 text-center">By
+                                    clicking, You are agreeing
+                                    to our terms.</span></p>
+                        </div>
+                        <div class="bolg-latest my-5 d-flex flex-direction-column flex-wrap justify-content-center">
+                            <h2 class="heading pb-4">Latest Stories</h2>
+                            <div class="row px-md-5 px-lg-1 m-0 p-0 justify-content-center">
+                                <div class="col-6 col-md-5 col-lg-6">
+                                    <div class="latest-blog-image position-relative">
+                                        <img class="img-fluid w-100"
+                                            src="https://slaywithus.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-05-31-at-4.04.39-PM-280x210.jpeg"
+                                            alt="" />
+                                    </div>
+                                    <div class="latest-blog-title py-3">
+                                        <h2 class="latest-blog-inner-title">
+                                            Attire that makes you feel easy!!
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-5 col-lg-6">
+                                    <div class="latest-blog-image position-relative">
+                                        <img class="img-fluid w-100"
+                                            src="https://slaywithus.com/wp-content/uploads/2019/08/WhatsApp-Image-2023-05-29-at-5.08.55-PM-280x210.jpeg"
+                                            alt="" />
+                                    </div>
+                                    <div class="latest-blog-title py-3">
+                                        <h2 class="latest-blog-inner-title">
+                                            A Touch of Modernization
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-5 col-lg-6">
+                                    <div class="latest-blog-image position-relative">
+                                        <img class="img-fluid w-100"
+                                            src="https://slaywithus.com/wp-content/uploads/2023/05/a2-280x210.png"
+                                            alt="" />
+                                    </div>
+                                    <div class="latest-blog-title py-3">
+                                        <h2 class="latest-blog-inner-title">
+                                            Contrasting Elegance: Embracing Blue and Black in Harmony with a White
+                                            Frock!
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-5 col-lg-6">
+                                    <div class="latest-blog-image position-relative">
+                                        <img class="img-fluid w-100"
+                                            src="https://slaywithus.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-05-31-at-4.04.38-PM-280x210.jpeg"
+                                            alt="" />
+                                    </div>
+                                    <div class="latest-blog-title py-3">
+                                        <h2 class="latest-blog-inner-title">
+                                            Formal but Informal! Good Fashion is always Surprising.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-category px-md-5 px-lg-0">
+                            <div class="blog-category-heading text-center">
+                                Categories
+                            </div>
+                            <div class="blog-category-list px-md-5 px-lg-1 px-2 pt-3 d-flex justify-content-between">
+                                <div class="category-list">All about fashion</div>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{> footer}}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <!-- ==========custom javascript============ -->
+        <script src="../public/javascripts/script.js"></script>
+</body>
+
+</html>

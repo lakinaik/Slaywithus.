@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Jost:wght@300;400&family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Poppins:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --first-color: (#a7a7a7);
+  --second-color: (#000000);
+  --pink: (#ffc2c2);
+  --text-font: "Roboto", sans-serif;
+  --heading-font: "Jost", sans-serif;
+  --third-font: "Cinzel", serif;
+  --fourth-font: "PT Sans Narrow", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+.bredcrumb a,
+.bredcrumb span{
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  color: #000000;
+  text-decoration: none;
+  font-size: .8rem;
+  transition: all .3s;
+}
+.bredcrumb a:hover{
+  color: #c06804;
+}
+
+/* =========Pop Up========== */
+
+.popUp-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000d3;
+  z-index: 999999;
+  display: none;
+  animation: subscribe .4s ease-in;
+}
+.img-wrapper{
+  height: 500px;
+}
+.img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popUp{
+  height: 500px;
+  background-color: white;
+}
+
+
+ .newsLatter-close-btn{
+  width: 42px;
+  display: grid;
+  place-items: center;
+  height: 42px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all .3s;
+}
+.newsLatter-close-btn:hover{
+  background-color: #e96113;
+  color: white;
+}
+
+.popUp label{
+  font-size: .8rem;
+}
+
+.newsletter-heading{
+  font-family: 'Cinzel', serif !important;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #111111;
+}
+.newsletter-inner-heading{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  color: #1a1818;
+  font-family: "Cinzel", serif;
+}
+.newsletter-input-field{
+  border: 0;
+  border-bottom: 2px solid;
+}
+.newsletter-input-field::placeholder{
+  text-align: center;
+}
+.newsletter-input-field:focus{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid;
+  
+}
+.newsletter-btn{
+  font-family: 'Jost', sans-serif !important;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 40px;
+  color: #ffffff; 
+  background-color: #111111;
+  padding: .1rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  transition: .2s all ease-in-out;
+}
+.newsletter-btn:hover{
+  background-color: #e6902e;
+  border: none;
+}
+.newsletter-checkbox{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111111;
+  cursor: pointer;
+}
+
+@keyframes subscribe {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+/* ===============hero text section========= */
+.hero-text-wrapper {
+    font-family: var(--fourth-font);
+    margin: 5rem 0;
+  }
+  
+  .hero-text-wrapper h1 {
+    font-weight: 400;
+    font-size: 45px;
+  }
+  
+  .hero-text-wrapper p {
+    color: #333331;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    font-size: 18px;
+  }
+  
+  .passage {
+    margin: 6rem 0px;
+  }
+  
+  .passage h2 {
+    font-weight: 300;
+    font-size: 29px;
+  }
+  
+  .passage p {
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #7a7a7a;
+    text-align: center;
+  }
+  
+  .btn {
+    background-color: #ffc2c2;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    border-radius: 2px;
+    padding: 8px 30px;
+  }
+  .btn a{
+    color: black !important;
+  }
+  .btn:hover a{
+    color: #ffc2c2 !important;
+
+  }
+  .btn:hover {
+    color: #ffc2c2;
+    background-color: #000000;
+  }
+  
+  .left-text {
+    font-family: var(--fourth-font);
+    font-size: 29px;
+  }
+  
+  .left-text h3 {
+    font-size: 2.2rem;
+  }
+  
+  .left-text p {
+    font-size: 19px;
+    font-weight: 500;
+    color: #7a7a7a;
+    list-style: 31px;
+  }
+  
+  .video-wrapper video {
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* ===========story=========== */
+  .section-heading {
+    font-weight: 300;
+    font-size: 26px;
+    font-family: "Jost", sans-serif;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  
+  .story-wrapper .img-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 280px;
+    overflow: hidden;
+  }
+  
+  .story-wrapper .img-wrapper img {
+    width: 100%;
+    transition: all 0.6s;
+  }
+  
+  .story-wrapper .img-wrapper:hover img {
+    scale: 1.1;
+  }
+  
+  .story-box {
+    margin-bottom: 50px;
+  }
+  
+  .img-wrapper span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    font-family: "Jost", sans-serif;
+    transition: all 0.4s;
+  }
+  
+  .img-wrapper span:hover {
+    opacity: 0.6;
+  }
+  
+  .story-details span a {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000000;
+    font-family: "Cinzel", serif;
+    transition: all 0.3s;
+  }
+  
+  .story-details span a:hover {
+    color: #cc893d;
+    text-decoration: underline;
+  }
+  
+  .bookmark-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+  }
+  
+  .bookmark-btn:hover {
+    color: #cc893d;
+  }
+  
+  .story-details .upload-details span {
+    font-family: "Jost", sans-serif;
+  }
+  
+  .story-details .upload-details span:nth-child(1) {
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  .story-details .upload-details span:nth-child(2) {
+    font-size: 0.8rem;
+    text-decoration: underline;
+  }
+  
+  /* =============service================= */
+  .block-heading {
+    font-family: "PT Sans Narrow", sans-serif;
+  }
+  
+  .block-heading h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .block-heading p {
+    font-size: 1.2rem;
+  }
+  
+  .service .image-wrapper {
+    width: 100%;
+    height: 500px;
+    transition: all 0.5s;
+  }
+  
+  .service .image-wrapper:hover {
+    transform: translateY(10px);
+  }
+  
+  .service .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+  }
+  
+  .service-title {
+    text-decoration: underline;
+    font-family: "PT Sans Narrow", sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .service-para {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 1.2rem 0;
+    text-align: center;
+  }
+  
